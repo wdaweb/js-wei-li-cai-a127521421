@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const number = (x) => {
+            let a = (Math.round(Math.random() * (x - 1)) + 1);
+            return a;
+        }
+        let b = [];
+        for (i = 0; i < 6; i++) {
+            let c = number(38);
+            if (b.indexOf(`${c}`) >= 0) {
+                i--;
+                continue;
+            }
+            else {
+                b.push(`${c}`);
+            }
+        }
+        document.write(`a區得號碼是${b[0]},${b[1]},${b[2]},${b[3]},${b[4]},${b[5]}<br>`)
+        document.write(`b區得號碼是${number(8)}`)
+    </script>
+</body>
+
+</html>
